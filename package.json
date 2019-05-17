@@ -1,0 +1,37 @@
+{
+	"name": "@logks/levels",
+	"version": "0.1.0",
+	"description": "An enum of log levels as defined by RFC 3164.",
+	"homepage": "https://github.com/logks/levels",
+	"bugs": {
+		"url": "https://github.com/logks/levels/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:logks/levels.git"
+	},
+	"license": "MIT",
+	"author": "Brian Faust <hello@basecode.sh>",
+	"files": [
+		"dist"
+	],
+	"main": "dist/index",
+	"types": "dist/index",
+	"scripts": {
+		"build": "yarn clean && tsc",
+		"build:watch": "yarn build -w",
+		"clean": "rimraf .coverage dist tmp",
+		"format": "yarn lint && yarn prettier",
+		"lint": "tslint -c tslint.json 'src/**/*.ts' --fix",
+		"prepublishOnly": "yarn format && yarn build",
+		"prettier": "prettier --write \"./*.{ts,js,json,md}\" \"./**/*.{ts,js,json,md}\""
+	},
+	"devDependencies": {
+		"@sindresorhus/tsconfig": "^0.3.0",
+		"prettier": "^1.17.1",
+		"rimraf": "^2.6.3",
+		"tslint": "^5.16.0",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^3.4.5"
+	}
+}
