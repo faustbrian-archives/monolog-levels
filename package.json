@@ -1,6 +1,6 @@
 {
 	"name": "@konceiver/monolog-levels",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "An enum of log levels as defined by RFC 3164.",
 	"license": "MIT",
 	"repository": {
